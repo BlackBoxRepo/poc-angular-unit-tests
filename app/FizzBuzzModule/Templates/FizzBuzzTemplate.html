@@ -1,0 +1,20 @@
+<div>
+    <label for="totalItems">
+        Total Items
+    </label>
+    <input id="totalItems" type="text" ng-model="fizzBuzzCtrl.model.totalItems" ng-change="fizzBuzzCtrl.getResults()"/>
+    <label for="divisor1">
+        Fizz
+    </label>
+    <input id="divisor1" type="text" ng-model="fizzBuzzCtrl.model.divisor1" ng-change="fizzBuzzCtrl.getResults()"/>
+    <label for="divisor2">
+        Buzz
+    </label>
+    <input id="divisor2" type="text" ng-model="fizzBuzzCtrl.model.divisor2" ng-change="fizzBuzzCtrl.getResults()"/>
+
+    <div>
+        <pre>
+            {{ fizzBuzzCtrl.results | json }}
+        </pre>
+    </div>
+</div>

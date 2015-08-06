@@ -4,46 +4,49 @@
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css">
-  <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css">
-  <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css">
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<ul class="menu">
+    <li><a href="#/fizzBuzz">FizzBuzz</a></li>
+    <li><a href="#/math">Math</a></li>
+</ul>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<hr/>
 
-  <div ng-view></div>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-  <div>Angular seed app: v<span app-version></span></div>
+<div ng-view></div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
-  <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="Services/CategoryTreeService.js"></script>
-  <script src="Resources/CategoryTreeResource.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="FizzBuzzModule/FizzBuzzModule.js"></script>
+<script src="FizzBuzzModule/Services/FizzBuzzService.js"></script>
+<script src="FizzBuzzModule/Models/FizzBuzzModelFactory.js"></script>
+<script src="FizzBuzzModule/Controllers/FizzBuzzController.js"></script>
+<script src="FizzBuzzModule/Directives/FizzBuzzDirective.js"></script>
+
+<script src="MathModule/MathModule.js"></script>
+<script src="MathModule/Services/MathService.js"></script>
+<script src="MathModule/Models/MathModelFactory.js"></script>
+<script src="MathModule/Controllers/MathController.js"></script>
+<script src="MathModule/Directives/MathDirective.js"></script>
+
+<script src="MainModule/MainModule.js"></script>
+<script src="MainModule/Controllers/MainModuleController.js"></script>
+<script src="MainModule/Views/FizzBuzzView.js"></script>
+<script src="MainModule/Views/MathView.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
