@@ -1,14 +1,18 @@
 (function () {
-    var app = angular.module('FizzBuzzModule');
+    CONSTANTS.FIZZ_BUZZ_MODULE.FIZZ_BUZZ_CONTROLLER = {
+        NAME: 'FizzBuzzController'
+    };
+
+    var app = angular.module(CONSTANTS.FIZZ_BUZZ_MODULE.NAME);
 
     app.controller(
-        'FizzBuzzController',
+        CONSTANTS.FIZZ_BUZZ_MODULE.FIZZ_BUZZ_CONTROLLER.NAME,
         [
-            'FizzBuzzService',
-            'FizzBuzzModelFactory',
-            function(fizzBuzzService, fizzBuzzModelFactory){
+            CONSTANTS.FIZZ_BUZZ_MODULE.FIZZ_BUZZ_SERVICE.NAME,
+            function(fizzBuzzService){
                 var ctrl = this;
-                ctrl.model = fizzBuzzModelFactory();
+                ctrl.model = new fizzBuzzModule_Models_FizzBuzzModel();
+//                ctrl.model = fizzBuzzModelFactory();
                 ctrl.results = [];
 
                 ctrl.getResults = function() {

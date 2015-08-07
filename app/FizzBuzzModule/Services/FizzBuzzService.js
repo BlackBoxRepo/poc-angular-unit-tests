@@ -1,8 +1,12 @@
 (function(){
-    var module = angular.module('FizzBuzzModule');
+    CONSTANTS.FIZZ_BUZZ_MODULE.FIZZ_BUZZ_SERVICE = {
+        NAME: 'FizzBuzzService'
+    };
+
+    var module = angular.module(CONSTANTS.FIZZ_BUZZ_MODULE.NAME);
 
     module.service(
-        'FizzBuzzService',
+        CONSTANTS.FIZZ_BUZZ_MODULE.FIZZ_BUZZ_SERVICE.NAME,
         [
             function() {
                 var service = this;

@@ -1,17 +1,21 @@
 (function () {
+    CONSTANTS.MAIN_MODULE = {
+        NAME: 'MainModule'
+    };
+
     var module = angular.module(
-        'MainModule',
+        CONSTANTS.MAIN_MODULE.NAME,
         [
-            'ngRoute',
-            'FizzBuzzModule',
-            'MathModule'
+            CONSTANTS.ANGULAR.ROUTE.MODULE_NAME,
+            CONSTANTS.FIZZ_BUZZ_MODULE.NAME,
+            CONSTANTS.MATH_MODULE.NAME
         ]
     );
     module.config(
         [
-            '$routeProvider',
-            function($routeProvider){
-                $routeProvider.otherwise({redirectTo: '/fizzBuzz'});
+            CONSTANTS.ANGULAR.ROUTE.VARIABLE_NAME,
+            function(router){
+                router.otherwise({redirectTo: '/fizzBuzz'});
             }
         ]
     );

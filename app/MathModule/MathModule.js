@@ -1,6 +1,9 @@
 (function(){
+    CONSTANTS.MATH_MODULE = {
+        NAME: 'MathModule'
+    };
     var app = angular.module(
-        'MathModule',
+        CONSTANTS.MATH_MODULE.NAME,
         [
         ]
     );

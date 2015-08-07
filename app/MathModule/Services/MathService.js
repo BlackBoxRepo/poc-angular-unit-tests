@@ -1,13 +1,15 @@
 (function(){
-    var module = angular.module('MathModule');
+    CONSTANTS.MATH_MODULE.MATH_SERVICE = {
+        NAME: 'MathService'
+    };
+    var module = angular.module(CONSTANTS.MATH_MODULE.NAME);
 
     module.service(
-        'MathService',
+        CONSTANTS.MATH_MODULE.MATH_SERVICE.NAME,
         [
             function() {
                 var service = this;
                 service.doMath = function(model) {
-                    var results = [];
                     if (!angular.isDefined(model.leftNumber)) {
                         throw "leftNumber must be defined";
                     }
